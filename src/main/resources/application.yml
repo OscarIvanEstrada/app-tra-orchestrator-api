@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /v1.0/
+spring:
+  application:
+    name: app-tra-orchestrator-api
+    version: develop
+  data:
+    mongodb:
+      uri: mongodb://user:pass@database.mlab.com:63642/database?retryWrites=false
+  sleuth:
+    sampler:
+      probability: 1        
+apigee:
+  token:
+    url: https://service.com
+    clienteId: C9rqIrp001212121121SgzGif3jns2
+    clienteSecreto: 1Smf12d1f2d12fd7vgJ
+    maxTimeInMillis: 300000 #300000 millis = 5 minutes
+  path:
+    auth: /oauth/client_credential/accesstoken
+    logger: /api/v1/tecnologia/logger
